@@ -24,7 +24,7 @@ vdown() {
     # If a valet dockerfile exists then stop it
     if [ -f docker-compose-valet.yml ]; then
         echo "👍    \e[4m\e[42m\e[30mValet Dockerfile found, stopping...\e[0m"
-        docker-compose stop
+        docker-compose --file docker-compose-valet.yml stop
     fi
 }
 ```
